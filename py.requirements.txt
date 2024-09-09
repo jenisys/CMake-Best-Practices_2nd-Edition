@@ -1,5 +1,5 @@
 # ============================================================================
-# PYTHON PACKAGE REQUIREMENTS: cxx.simplelog
+# PYTHON PACKAGE REQUIREMENTS:
 # ============================================================================
 # DESCRIPTION:
 #    pip install -r <THIS_FILE>
@@ -23,8 +23,15 @@ gcovr
 cmake-build @ git+https://github.com/jenisys/cmake-build@v0.2.4.dev2
 conan >= 2.0
 
-# -- MAYBE:
+# -- MAYBE: vcpkg wrapper, installable with "pip".
+# USE: vcpkg-bootstrap  -- BUT: Fails install ...
+vcpkgpip >= 1.0
+
+# -- MAYBE: Install python packages with "uv pip install" faster than before.
+# USE: uv pip install -U -r py.requirements.txt
 # uv >= 0.4.0
 
+# -- DEVELOPMENT: Search for text-patterns in sources
+# EXAMPLE: pss --cmake add_test --ignore-dir .direnv --ignore-dir build.multi
 pss >= 1.14
 
